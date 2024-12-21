@@ -110,3 +110,36 @@ void addRoom() {
     rooms.push_back(newRoom);
     cout << "Room added successfully!" << endl;
 }
+
+/**
+ *Function to book a room in the hotel database
+ */
+void bookRoom() {
+    Booking newBooking;
+    cout << "Enter Booking ID: ";
+    cin >> newBooking.bookingID;
+    cout << "Enter Customer Name: ";
+    cin >> newBooking.customerName;
+    cout << "Enter Room Number: ";
+    cin >> newBooking.roomNumber;
+    cout << "Enter Check-in Date (YYYY-MM-DD): ";
+    cin >> newBooking.checkInDate;
+    cout << "Enter Check-out Date (YYYY-MM-DD): ";
+    cin >> newBooking.checkOutDate;
+
+    // Check Room Availability
+    for (auto &room : rooms) {
+        if (room.roomNumber == newBooking.roomNumber) {
+            if (room.isAvailable) {
+                room.isAvailable = false; // Mark room as booked
+                bookings.push_back(newBooking);
+                cout << "Room booked successfully!" << endl;
+                return;
+            } else {
+                cout << "Room is not available!" << endl;
+                return;
+            }
+        }
+    }
+    cout << "Room not found!" << endl;
+}
