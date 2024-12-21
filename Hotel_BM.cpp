@@ -143,3 +143,33 @@ void bookRoom() {
     }
     cout << "Room not found!" << endl;
 }
+
+/**
+ *Function to cancel a booking in the hotel database
+ */
+void cancelBooking() {
+    int bookingID;
+    cout << "Enter Booking ID to cancel: ";
+    cin >> bookingID;
+
+    // Find the booking to cancel
+    for (size_t i = 0; i < bookings.size(); i++) {
+        if (bookings[i].bookingID == bookingID) {
+
+            // Mark Room as Available
+            for (auto &room : rooms) {
+                if (room.roomNumber == bookings[i].roomNumber) {
+                    room.isAvailable = true;
+                }
+            }
+
+            // Remove booking
+            bookings.erase(bookings.begin() + i);
+            cout << "Booking cancelled successfully!" << endl;
+            return;
+        }
+    }
+
+    // Booking ID not found
+    cout << "Booking ID not found!" << endl;
+}
