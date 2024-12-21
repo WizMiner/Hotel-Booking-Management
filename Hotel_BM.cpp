@@ -100,7 +100,8 @@ int main()
 /**
  *Function to add a room to the hotel database
  */
-void addRoom() {
+void addRoom()
+{
     Room newRoom;
     cout << "Enter Room Number: ";
     cin >> newRoom.roomNumber;
@@ -114,7 +115,8 @@ void addRoom() {
 /**
  *Function to book a room in the hotel database
  */
-void bookRoom() {
+void bookRoom()
+{
     Booking newBooking;
     cout << "Enter Booking ID: ";
     cin >> newBooking.bookingID;
@@ -128,14 +130,19 @@ void bookRoom() {
     cin >> newBooking.checkOutDate;
 
     // Check Room Availability
-    for (auto &room : rooms) {
-        if (room.roomNumber == newBooking.roomNumber) {
-            if (room.isAvailable) {
+    for (auto &room : rooms)
+    {
+        if (room.roomNumber == newBooking.roomNumber)
+        {
+            if (room.isAvailable)
+            {
                 room.isAvailable = false; // Mark room as booked
                 bookings.push_back(newBooking);
                 cout << "Room booked successfully!" << endl;
                 return;
-            } else {
+            }
+            else
+            {
                 cout << "Room is not available!" << endl;
                 return;
             }
@@ -147,18 +154,23 @@ void bookRoom() {
 /**
  *Function to cancel a booking in the hotel database
  */
-void cancelBooking() {
+void cancelBooking()
+{
     int bookingID;
     cout << "Enter Booking ID to cancel: ";
     cin >> bookingID;
 
     // Find the booking to cancel
-    for (size_t i = 0; i < bookings.size(); i++) {
-        if (bookings[i].bookingID == bookingID) {
+    for (size_t i = 0; i < bookings.size(); i++)
+    {
+        if (bookings[i].bookingID == bookingID)
+        {
 
             // Mark Room as Available
-            for (auto &room : rooms) {
-                if (room.roomNumber == bookings[i].roomNumber) {
+            for (auto &room : rooms)
+            {
+                if (room.roomNumber == bookings[i].roomNumber)
+                {
                     room.isAvailable = true;
                 }
             }
@@ -172,4 +184,22 @@ void cancelBooking() {
 
     // Booking ID not found
     cout << "Booking ID not found!" << endl;
+}
+/**
+ *Function to check if a room is available
+ */
+void viewBookings()
+{
+    if (bookings.empty())
+    {
+        cout << "No bookings available!" << endl;
+        return;
+    }
+
+    cout << "\n--- Current Bookings ---" << endl;
+    for (const auto &booking : bookings)
+    {
+        cout << "Booking ID: " << booking.bookingID << ", Customer: " << booking.customerName
+             << ", Check-out: " << booking.checkOutDate << endl;
+    }
 }
