@@ -249,7 +249,6 @@ void manageNotifications()
     }
 }
 
-
 /**
  *Function to manage requests in the hotel database
  *Implement Stack and Queue Functions
