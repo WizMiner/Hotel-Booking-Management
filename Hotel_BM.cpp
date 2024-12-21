@@ -97,3 +97,16 @@ int main()
 
     return 0;
 }
+/**
+ *Function to add a room to the hotel database
+ */
+void addRoom() {
+    Room newRoom;
+    cout << "Enter Room Number: ";
+    cin >> newRoom.roomNumber;
+    cout << "Enter Room Type (Single/Double/Suite): ";
+    cin >> newRoom.roomType;
+    newRoom.isAvailable = true; // Room is available by default
+    rooms.push_back(newRoom);
+    cout << "Room added successfully!" << endl;
+}
