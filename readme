@@ -1,23 +1,27 @@
-Here is a list of essential functions tailored for a hotel booking system:
+# Hotel Booking System
+
+Welcome to the **Hotel Booking System** project! This system allows hotel management to efficiently manage bookings, rooms, customers, payments, and more. The system is designed to facilitate seamless interactions between staff and customers, providing essential features for booking management, room assignments, billing, notifications, and reporting.
 
 ---
+
+## Features
 
 ### **Booking Management**
 1. **Create Booking**  
    - Add a new booking with customer details, room preferences, check-in/check-out dates, and payment status.
-
+  
 2. **Modify Booking**  
    - Update an existing booking (e.g., change dates, room type, or customer details).
-
+  
 3. **Cancel Booking**  
    - Remove a booking and update the room availability.
-
+  
 4. **Search Booking**  
    - Find bookings using booking ID, customer name, or room number.
-
+  
 5. **View Booking Details**  
    - Display full details of a specific booking.
-
+  
 6. **List All Bookings**  
    - Show all current and past bookings with relevant details.
 
@@ -26,19 +30,19 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Room Management**
 7. **Check Room Availability**  
    - Determine if rooms are available for specified dates.
-
+  
 8. **Assign Room**  
    - Allocate a specific room to a customer based on preferences or availability.
-
+  
 9. **Release Room**  
    - Mark a room as available after checkout.
-
+  
 10. **View All Rooms**  
    - List all rooms with their current status (available/occupied).
-
+  
 11. **Add Room**  
    - Add a new room to the system (e.g., during hotel expansion).
-
+  
 12. **Remove Room**  
    - Remove a room from the system (e.g., for renovation).
 
@@ -47,13 +51,13 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Customer Management**
 13. **Add Customer Details**  
    - Register customer information (name, contact, preferences).
-
+  
 14. **Update Customer Details**  
    - Edit customer information.
-
+  
 15. **Search Customer**  
    - Find a customer by name or contact number.
-
+  
 16. **View Customer History**  
    - Show past bookings for a specific customer.
 
@@ -62,10 +66,10 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Payment and Billing**
 17. **Process Payment**  
    - Handle payment for bookings (credit card, cash, or online).
-
+  
 18. **View Billing History**  
    - Display all payments made by a customer.
-
+  
 19. **Generate Invoice**  
    - Create an invoice for a completed booking.
 
@@ -74,13 +78,13 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Notifications and Communication**
 20. **Send Booking Confirmation**  
    - Notify customers of their booking details via email/SMS.
-
+  
 21. **Send Payment Reminder**  
    - Notify customers of pending payments.
-
+  
 22. **Send Check-in Reminder**  
    - Remind customers about their upcoming check-in.
-
+  
 23. **Send Checkout Notification**  
    - Notify customers about checkout time and process.
 
@@ -89,10 +93,10 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Reports and Analytics**
 24. **Generate Occupancy Report**  
    - Show room occupancy rates over a given period.
-
+  
 25. **Revenue Report**  
    - Calculate total revenue from bookings over a specific time.
-
+  
 26. **Booking Trends**  
    - Analyze booking trends (e.g., peak seasons, popular room types).
 
@@ -101,16 +105,62 @@ Here is a list of essential functions tailored for a hotel booking system:
 ### **Miscellaneous**
 27. **Handle Special Requests**  
    - Record and manage customer special requests (e.g., extra bed, early check-in).
-
+  
 28. **Check Discount Eligibility**  
    - Apply discounts for loyal customers or during promotions.
-
+  
 29. **System Backup and Restore**  
    - Backup all booking data for security and restore in case of data loss.
-
+  
 30. **Manage Staff Access**  
    - Grant or restrict access to certain functions for staff members.
 
 ---
 
-Would you like help implementing any of these functions in code?
+## How to Use the System
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/WizMiner/Hotel-Booking-Management.git
+   ```
+
+2. **Navigate to the Project Folder**  
+   ```bash
+   cd hotel-booking-system
+   ```
+
+3. **Compile the Program**  
+   Use the following command to compile the code:
+   ```bash
+   g++ main.cpp -o hotel_booking_system
+   ```
+
+4. **Run the Program**  
+   After compiling, run the program using:
+   ```bash
+   ./hotel_booking_system
+   ```
+
+---
+
+## Future Enhancements
+
+- **Integration with Payment Gateways**: Implement online payment methods like PayPal or Stripe.
+- **User Authentication**: Add staff login and role-based access for secure operations.
+- **Mobile Application**: Develop a mobile version of the system for customers to book rooms and check availability on the go.
+
+---
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request. Please ensure that your code adheres to the coding style and conventions of the project.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+This **README** outlines the primary features of the hotel booking system and provides basic setup instructions. Let me know if you need help with specific implementation details!
