@@ -203,3 +203,48 @@ void viewBookings()
              << ", Check-out: " << booking.checkOutDate << endl;
     }
 }
+
+/**
+ *Function to manage notifications in the hotel database
+ *Implement Stack and Queue Functions
+ *For storing and handling notifications.
+ */
+stack<string> notifications;
+
+void manageNotifications()
+{
+    int choice;
+    cout << "\n1. Add Notification\n2. View and Remove Notification\nEnter your choice: ";
+    cin >> choice;
+
+    if (choice == 1)
+    {
+        // Add a new notification
+        string notification;
+        cout << "Enter notification: ";
+        cin.ignore();
+        getline(cin, notification);
+        notifications.push(notification);
+        cout << "Notification added!" << endl;
+    }
+    else if (choice == 2)
+    {
+        if (notifications.empty())
+        {
+            // No notifications to display
+            cout << "No notifications to display!" << endl;
+        }
+        else
+        {
+            // View and remove the top notification
+            cout << "Notification: " << notifications.top() << endl;
+            notifications.pop();
+            cout << "Notification removed!" << endl;
+        }
+    }
+    else
+    {
+        // Invalid choice
+        cout << "Invalid choice!" << endl;
+    }
+}
