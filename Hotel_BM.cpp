@@ -248,3 +248,46 @@ void manageNotifications()
         cout << "Invalid choice!" << endl;
     }
 }
+
+
+/**
+ *Function to manage requests in the hotel database
+ *Implement Stack and Queue Functions
+ *For storing and handling requests.
+ */
+queue<string> requests;
+
+void manageRequests()
+{
+    int choice;
+    cout << "\n1. Add Request\n2. Process Request\nEnter your choice: ";
+    cin >> choice;
+
+    if (choice == 1)
+    {
+        string request;
+        cout << "Enter request: ";
+        cin.ignore();
+        getline(cin, request);
+        requests.push(request);
+        cout << "Request added!" << endl;
+    }
+    else if (choice == 2)
+    {
+        if (requests.empty())
+        {
+            cout << "No requests to process!" << endl;
+        }
+        else
+        {
+            // Process the request
+            cout << "Processing request: " << requests.front() << endl;
+            requests.pop();
+            cout << "Request processed!" << endl;
+        }
+    }
+    else
+    {
+        cout << "Invalid choice!" << endl;
+    }
+}
